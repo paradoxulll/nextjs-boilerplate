@@ -1,0 +1,60 @@
+/* /app/page.module.css */
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+/* Stele mișcătoare */
+.stars {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: transparent;
+  box-shadow: 
+    1000px 1000px white,
+    2000px 1500px white,
+    1500px 2000px white,
+    3000px 500px white;
+  animation: moveStars 50s linear infinite;
+}
+
+@keyframes moveStars {
+  0% { transform: translate(0,0); }
+  100% { transform: translate(-1000px,-1000px); }
+}
+
+/* Logo sus */
+.logo {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Text central */
+.comingSoon {
+  font-size: 3rem;
+  font-weight: bold;
+  z-index: 10;
+}
+
+/* Discord jos */
+.discord {
+  position: absolute;
+  bottom: 50px;
+  color: #7289da;
+  transition: transform 0.2s;
+}
+
+.discord:hover {
+  transform: scale(1.2);  
+}
